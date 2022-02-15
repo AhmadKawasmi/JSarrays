@@ -6,7 +6,7 @@ const sayHello = function(givenArr) {
     }
 }
 
-sayHello(arr1)
+// sayHello(arr1)
 
 const formatArr = function(arr) {
     for (let i = 0; i < arr.length; i++) {
@@ -14,5 +14,17 @@ const formatArr = function(arr) {
     }
 }
 
-formatArr(arr1)
-console.log(arr1);
+// formatArr(arr1)
+// console.log(arr1);
+
+const names = "ahmad issa mohannad omar ibrahem bahaa".split(' ')
+
+
+const toUpper = function(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = arr[i].toUpperCase()
+    }
+}
+
+toUpper(names)
+console.log(names);
