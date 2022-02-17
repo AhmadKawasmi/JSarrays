@@ -28,3 +28,18 @@ const toUpper = function(arr) {
 
 toUpper(names)
 console.log(names);
+
+
+const arr2 = ['Ahmad', 'Ibrahim', 'Bahaa', 'Khaled', 'Yazzed', 'Adam', 'Insherah', 'Haneen']
+console.log(arr2);
+arr2.push('Sameer')
+arr2.push('Rami')
+arr2.splice(3, 1, 'suad', 'sameera')
+const newArr = arr2.slice(2, arr2.length)
+console.log(arr2);
+console.log(newArr);
+
+const user = { firstName: "Ahmad", lastName: "Kawasmi", age: 18 }
+user.mobileNumber = '0543367608'
+
+console.log(user);
