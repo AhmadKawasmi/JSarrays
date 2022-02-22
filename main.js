@@ -55,3 +55,85 @@ const user = {
 user.mobileNumber = '0543367608'
 user.signIn()
 console.log(user);
+
+
+const users = [{
+        firstName: 'Ahmad',
+        lastName: 'Kawasmi',
+        userName: 'AhmadKawasmi',
+        passWord: '276609',
+        age: 18,
+        isLoggedIn: false,
+        signIn: function() {
+            this.isLoggedIn = true
+        },
+        signOut: function() {
+            this.isLoggedIn = false
+        }
+    },
+    {
+        firstName: 'Ibrahim',
+        lastName: 'Safadi',
+        userName: 'Pabbda',
+        passWord: '1234',
+        age: 18,
+        isLoggedIn: false,
+        signIn: function() {
+            this.isLoggedIn = true
+        },
+        signOut: function() {
+            this.isLoggedIn = false
+        }
+    },
+    {
+        firstName: 'Bahaa',
+        lastName: 'Jawabreh',
+        userName: 'AbuAlDodeem',
+        passWord: '1234',
+        age: 18,
+        isLoggedIn: false,
+        signIn: function() {
+            this.isLoggedIn = true
+        },
+        signOut: function() {
+            this.isLoggedIn = false
+        }
+    },
+    {
+        firstName: 'Khaled',
+        lastName: 'Amro',
+        userName: 'Khokho',
+        passWord: '1234',
+        age: 18,
+        isLoggedIn: false,
+        signIn: function() {
+            this.isLoggedIn = true
+        },
+        signOut: function() {
+            this.isLoggedIn = false
+        }
+    },
+
+]
+
+const findUser = (userName) => {
+    for (let i = 0; i < users.length; i++) {
+        if (users[i].userName == userName) {
+            return users[i]
+        }
+    }
+    return { err: true, msg: 'Cant Find User Ya Fucker' }
+}
+
+const signInByUserName = (userName, passWord) => {
+    const user = findUser(userName)
+    if (user.err) {
+        alert(user.msg)
+        return
+    } else if (user.passWord === passWord) {
+        user.signIn()
+        return user
+    } else {
+        alert('wrong Password')
+    }
+}
