@@ -76,7 +76,7 @@ const users = [{
         lastName: 'Safadi',
         userName: 'Pabbda',
         passWord: '1234',
-        age: 18,
+        age: 17,
         isLoggedIn: false,
         signIn: function() {
             this.isLoggedIn = true
@@ -104,7 +104,7 @@ const users = [{
         lastName: 'Amro',
         userName: 'Khokho',
         passWord: '1234',
-        age: 18,
+        age: 17,
         isLoggedIn: false,
         signIn: function() {
             this.isLoggedIn = true
@@ -133,7 +133,16 @@ const signInByUserName = (userName, passWord) => {
     } else if (user.passWord === passWord) {
         user.signIn()
         return user
-    } else {
+    }else {
         alert('wrong Password')
     }
 }
+
+// const findUser = (userName)=>{
+//     for (let i = 0; i< users.length; i++) {
+//       if (users[i].userName = userName) {
+          
+//       }
+       
+//     }
+// }
